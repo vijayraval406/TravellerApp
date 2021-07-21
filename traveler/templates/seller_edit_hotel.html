@@ -1,0 +1,406 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+    Traveler by freehtml5.co
+    Twitter: http://twitter.com/fh5co
+    URL: http://freehtml5.co
+-->
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Traveler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FreeHTML5.co" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <!-- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script>
+            if ( window.history.replaceState ) {
+                window.history.replaceState( null, null, window.location.href );
+            }
+    </script>
+    <style>
+        /* The heart of the matter */
+          
+        .horizontal-scrollable > .row {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+          
+        .horizontal-scrollable > .row > .col-xs-4 {
+            display: inline-block;
+            float: none;
+        }
+        /* Decorations */
+          
+        .col-xs-4 {
+            color: white;
+            font-size: 24px;
+            padding-bottom: 20px;
+            padding-top: 18px;
+        }
+          
+    </style>
+
+    <!-- Glyphicon Examples -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.min.css' %}">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Modernizr JS -->
+    <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/mdb-pro.min.css' %}">
+    <!-- Material Design Bootstrap Ecommerce -->
+    <link rel="stylesheet" href="{% static 'css/mdb.ecommerce.min.css' %}">
+    <!-- Your custom styles (optional) -->
+
+    <!--DateTimePicker -->
+    <!-- <link href="{% static 'datepicker/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen"> -->
+    <link href="{% static 'datepicker/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet" media="screen">
+
+    </head>
+    <body>
+    <!-- <div class="gtco-loader"></div> -->
+    <div id="page">
+    <!-- <div class="page-inner"> -->
+    <nav class="gtco-nav" role="navigation">
+        <div class="gtco-container">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <div id="gtco-logo"><a href="{% url 'seller_index' %}">Traveler <em>.</em></a></div>
+                </div>
+                <div class="col-xs-8 text-right menu-1">
+                    <ul>
+                        <li class="has-dropdown">
+                            <a href="#"><span class="glyphicon glyphicon-plane"></span>  Travel</a>
+                            <ul class="dropdown">
+                                <li><a href="{% url 'seller_add_flight' %}"><span class="glyphicon glyphicon-plane"></span>  Flights</a></li>
+                                <li><a href="{% url 'seller_add_cab' %}"><img src="{% static 'images/cab1.png' %}" height="20" width="20">  Cabs</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown"><a href="#"><span class="glyphicon glyphicon-cog"></span>  Services</a>
+                            <ul class="dropdown">
+                                <li><a href="{% url 'seller_add_hotel' %}"><span class="glyphicon glyphicon-bed"></span> Hotels</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'seller_add_hotelgallery' %} "><span class="glyphicon glyphicon-film"></span> Hotel Gallery</a></li> 
+                        <li><a href="{% url 'seller_view_products' %}"><span class="glyphicon glyphicon-briefcase"></span>  View Products</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> My Orders</a></li>
+
+                        {% if request.session.email %}
+                        <li class="has-dropdown">
+                            <a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a>
+                            <ul class="dropdown">
+                                <li><a href="{% url 'seller_change_password' %}"><span class="glyphicon glyphicon-edit"></span>Change Password</a></li>   
+                                <li><a href="{% url 'seller_edit_profile' %}"><span class="glyphicon glyphicon-edit"></span> Edit Profile</a></li>
+                                <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span> Logout {{request.session.fname}}</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'seller_edit_profile' %}"><img src="{{request.session.image}}" width="40px" height="40px"></a></li>
+                        {% else %}
+                        <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        {% endif %}
+                    </ul>   
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    
+    <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url({% static 'images/cover_bg_1.jpg' %})">
+        <div class="overlay"></div>
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 text-center">
+                    <div class="row row-mt-15em">
+
+                        <div>
+                            <H1>Edit Hotel Details</H1>
+                            <h2>Edit Here...</h2>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+<center>
+    <div class="container">
+    <div class="gtco-section">
+    
+      <main>
+        <div class="container">
+          
+          <section class="mb-5">
+            <div class="row">
+              <div class="col-md-6 mb-4 mb-md-0">
+                <div id="mdb-lightbox-ui"></div>
+                <div class="mdb-lightbox">
+                  <div class="row product-gallery mx-1">
+                    <div class="col-12 mb-0">
+                        <h3>{{hotels.hotel_name}}</h3>
+                      <figure class="view overlay rounded z-depth-1 main-img" style="max-height: 450px;">
+                        <a href="{{hotels.hotel_image.url}}" data-size="710x823">
+                          <img src="{{hotels.hotel_image.url}}" class="img-fluid z-depth-1" style="margin-top: -0px;">
+                        </a>
+                      </figure>
+                      <!-- <input type="file" name="flight_dest_image" id="image" class="form-control"> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h5 class="intro-text-small"><b>Edit Hotel Details</b></h5>
+                
+                <ul class="rating">
+                  <li>
+                    
+                  </li>
+                  <li>
+                    
+                  </li>
+                  <li>
+                    
+                  </li>
+                  <li>
+                    
+                  </li>
+                  <li>
+                    
+                  </li>
+                </ul>
+                
+                <div class="table-responsive">
+                <form name="seller_edit_hotel" method="post" action="{% url 'seller_edit_hotel' pk=hotels.pk %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                  <table class="table table-sm table-borderless mb-0">
+                    <tbody>
+                      <tr>
+                        <th class="pl-0 w-25" scope="row"><strong><b>HOTEL</b></strong></th>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{hotels.hotel_name}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="pl-0 w-25" scope="row"><strong><b>FARE</b></strong></th>
+                        <td><b>₹&nbsp;</b><strong><input type="text" name="hotel_roomfare" value="{{hotels.hotel_roomfare}}"></strong></td>
+                      </tr>
+                      <tr>
+                        <th class="pl-0 w-25" scope="row"><strong><b>DESCRIPTION</b></strong></th>
+                        <td><h6 class="intro-text-small"><textarea rows="5" cols="22" name="hotel_desc" id="hotel_desc" class="form-control">{{hotels.hotel_desc}}</textarea></h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="action" value="Edit Details" class="btn btn-primary btn-md mr-1 mb-2">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr>
+                </form>
+              </div>
+            </div>
+          </section>
+      
+        <hr>
+    </div>
+  </main>
+       
+</div>
+</div>
+</center>
+
+    <footer id="gtco-footer" role="contentinfo">
+        <div class="gtco-container">
+            <div class="row row-p   b-md">
+
+                <div class="col-md-4">
+                    <div class="gtco-widget">
+                        <h3>About Us</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos molestias quod sint ipsum possimus temporibus officia iste perspiciatis consectetur in fugiat repudiandae cum. Totam cupiditate nostrum ut neque ab?</p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-md-push-1">
+                    <div class="gtco-widget">
+                        <h3>Destination</h3>
+                        <ul class="gtco-footer-links">
+                            <li><a href="#">Europe</a></li>
+                            <li><a href="#">Australia</a></li>
+                            <li><a href="#">Asia</a></li>
+                            <li><a href="#">Canada</a></li>
+                            <li><a href="#">Dubai</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-md-push-1">
+                    <div class="gtco-widget">
+                        <h3>Hotels</h3>
+                        <ul class="gtco-footer-links">
+                            <li><a href="#">Luxe Hotel</a></li>
+                            <li><a href="#">Italy 5 Star hotel</a></li>
+                            <li><a href="#">Dubai Hotel</a></li>
+                            <li><a href="#">Deluxe Hotel</a></li>
+                            <li><a href="#">BoraBora Hotel</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-md-push-1">
+                    <div class="gtco-widget">
+                        <h3>Get In Touch</h3>
+                        <ul class="gtco-quick-contact">
+                            <li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
+                            <li><a href="#"><i class="icon-mail2"></i> info@freehtml5.co</a></li>
+                            <li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row copyright">
+                <div class="col-md-12">
+                    <p class="pull-left">
+                        <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+                        <small class="block">Designed by <a href="https://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
+                    </p>
+                    <p class="pull-right">
+                        <ul class="gtco-social-icons pull-right">
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                            <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- </div> -->
+
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- jQuery Easing -->
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Waypoints -->
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <!-- Carousel -->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <!-- countTo -->
+    <script src="{% static 'js/jquery.countTo.js' %}"></script>
+
+    <!-- Stellar Parallax -->
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+
+    <!-- Magnific Popup -->
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup-options.js' %}"></script>
+        
+
+    <!-- Main -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'datepicker/jquery/jquery-1.8.3.min.js' %}" charset="UTF-8"></script>
+<script type="text/javascript" src="{% static 'datepicker/bootstrap/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'datepicker/js/bootstrap-datetimepicker.js' %}" charset="UTF-8"></script>
+<script type="text/javascript" src="{% static 'datepicker/js/locales/bootstrap-datetimepicker.fr.js' %}" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+    $('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
+
+    </body>
+</html>

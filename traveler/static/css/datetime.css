@@ -1,0 +1,11 @@
+body {
+  text-align: center;
+  margin: 3rem 1rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.datepicker {
+  display: inline-block;
+}
